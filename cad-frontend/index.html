@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CAD Archive</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link href="global.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>3D CAD Blueprint Archive</h1>
+        <div class="card">
+            <div class="card-body">
+                <h3>Upload CAD Model</h3>
+                
+                <!-- Replace 'your-backend-app-name.onrender.com' with your actual live backend domain once deployed -->
+                <form action="https://onrender.com" method="post" enctype="multipart/form-data"> 
+                    <input class="form-control" type="file" name="file" accept=".step,.stl,.obj,.glb"> 
+                    <button class="btn btn-primary mt-3"> Save Archive </button> 
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
