@@ -46,7 +46,7 @@ public class FileController {
                 return ResponseEntity
                         .badRequest()
                         .body(new ErrorResponse(
-                            "Invalid file type. Supported: .dwg, .dxf, .step, .iges, .pdf"
+                            "Invalid file type. Supported: .dwg, .dxf, .step, .iges, .pdf, .glb, .stl, .obj"
                         ));
             }
 
@@ -78,7 +78,12 @@ public class FileController {
                contentType.equalsIgnoreCase("application/dxf") ||                // .dxf
                contentType.equalsIgnoreCase("application/step") ||               // .step
                contentType.equalsIgnoreCase("application/iges") ||               // .iges
-               contentType.equalsIgnoreCase("application/pdf");                  // .pdf
+               contentType.equalsIgnoreCase("application/pdf") ||                // .pdf
+               contentType.equalsIgnoreCase("model/gltf-binary") ||              // .glb
+               contentType.equalsIgnoreCase("model/gltf+json") ||                // .gltf
+               contentType.equalsIgnoreCase("model/stl") ||                      // .stl
+               contentType.equalsIgnoreCase("model/obj") ||                      // .obj
+               contentType.equalsIgnoreCase("application/octet-stream");         // fallback for 3D formats
     }
 
     /**
